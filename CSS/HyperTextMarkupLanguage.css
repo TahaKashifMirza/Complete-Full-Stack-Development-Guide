@@ -1,0 +1,108 @@
+body {
+    background-color: rgb(21, 100, 119);
+    color: white;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    flex-direction: column;
+    animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.container {
+    max-width: 800px;
+    background-color: #333;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    animation: slideUp 1s ease-in-out;
+}
+
+@keyframes slideUp {
+    from { transform: translateY(50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+h1 {
+    color: yellow;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: yellow;
+}
+
+.faq {
+    margin-top: 20px;
+}
+
+.faq-item {
+    margin-bottom: 20px;
+}
+
+.faq-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    animation: slideInLeft 1s ease-in-out;
+}
+
+.faq-item p {
+    font-size: 1.2rem;
+    margin-left: 20px;
+    animation: slideInRight 1s ease-in-out;
+}
+
+@keyframes slideInLeft {
+    from { transform: translateX(-50px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideInRight {
+    from { transform: translateX(50px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+
+    h1, h2 {
+        font-size: 1.5rem;
+    }
+
+    p, .faq-item h3, .faq-item p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    h1, h2 {
+        font-size: 1.2rem;
+    }
+
+    p, .faq-item h3, .faq-item p {
+        font-size: 0.9rem;
+    }
+}

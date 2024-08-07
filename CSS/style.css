@@ -1,0 +1,169 @@
+body {
+    background-color: rgb(21, 100, 119);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 50px;
+    font-family: Arial, sans-serif;
+    color: #fff;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+h1, h2 {
+    background-color: #333;
+    color: yellow;
+    text-align: center;
+    border-radius: 20px;
+    padding: 20px;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+p.description {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    text-align: center;
+    max-width: 800px;
+    margin-bottom: 40px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.card-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.card {
+    width: 350px;
+    height: 400px;
+    perspective: 1000px;
+    margin: 20px;
+    margin-bottom: 5rem;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.cardheading {
+    background-color: #333;
+    color: yellow;
+    text-align: center;
+    border-radius: 20px;
+    font-size: 1.5rem;
+    padding: 10px;
+}
+
+.card-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.6s ease-in-out;
+}
+
+.card:hover .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+    width: 100%;
+    height: 90%;
+    position: absolute;
+    backface-visibility: hidden;
+    border-radius: 8px;
+    box-shadow: 0px 20px 20px -1px rgba(0, 0, 0, 0.5);
+}
+
+.card-front img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.card-back {
+    background-color: rgb(185, 221, 226);
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: rotateY(180deg);
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.card-back p {
+    margin: 10px 0;
+    font-size: 1em;
+    text-align: center;
+}
+
+.card-back button {
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.card-back button:hover {
+    color: yellow;
+}
+
+@media (max-width: 768px) {
+    h1, h2 {
+        font-size: 1.5rem;
+        padding: 15px;
+    }
+
+    p.description {
+        font-size: 1rem;
+        padding: 0 10px;
+    }
+
+    .card {
+        width: 80%;
+        height: 450px; /* Increased height */
+    }
+
+    .card-back p, .card-back button {
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 20px;
+    }
+
+    h1, h2 {
+        font-size: 1.2rem;
+        padding: 10px;
+    }
+
+    p.description {
+        font-size: 0.9rem;
+    }
+
+    .card {
+        width: 100%;
+        height: 500px; /* Increased height */
+    }
+
+    .card-back p, .card-back button {
+        font-size: 0.8em;
+    }
+}
